@@ -29,6 +29,32 @@ public interface ItemBiblioteca
      * Marca o item como emprestado. Deve ser chamado quando o item for retirado da biblioteca
      * por um usuário.
      */
-
     void emprestar();
+
+    /**
+     * Marca o item como devolvido. Deve ser chamado quando o item for retirado da biblioteca
+     * por um usuário.
+     */
+    void devolver();
+
+    /**
+     * Verifica se o item está atualmente reservado.
+     *
+     * @return true se estiver reservado, falso caso contrário.
+     */
+    boolean isReservado();
+
+    /**
+     * Reserva o item para um usuário que deseja retirá-lo no futuro.
+     * Deve ser usado apenas se o item não estiver disponível para
+     * empréstimo no momento.
+     */
+
+    void reservar();
+
+    /**
+     * Cancela a reserva do item, tornando-o disponível para outros
+     * usuários reservarem ou pegarem emprestado.
+     */
+    void cancelarReserva();
 }
