@@ -17,6 +17,15 @@ package ueg.com;
 
 public interface Relatorio
 {
+    /**
+     * Gera um relatório detalhado com o estado atual dos itens.
+     * <strong>
+     *     Este método deve ser sobrescrito pelas classes que
+     *     implementem esta interface, fornecendo assim uma saída
+     *     específica que represente tanto o conteúdo quanto a
+     *     análise necessária para entender o contexto corrente.
+     * </strong>
+     */
 
-    
+    void geraRelatorio();
 }
