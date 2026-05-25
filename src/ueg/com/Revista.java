@@ -14,6 +14,11 @@ public class Revista implements ItemBiblioteca
     private boolean disponivel;
     private boolean reservado;
 
+    /**
+     * Construtor para criar uma nova instância da Revista
+     * @param titulo da revista
+     * @param edicao da revista
+     */
     public Revista(String titulo, int edicao)
     {
         this.titulo = titulo;
