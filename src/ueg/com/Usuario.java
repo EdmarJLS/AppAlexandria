@@ -33,5 +33,23 @@ public class Usuario extends Pessoa
     {
         return numeroEmprestimos;
     }
-    
+
+    /**
+     * Incrementa a quantidade de empréstimos do usuário de um em um
+     */
+    public void incrementaEmprestimos()
+    {
+        this.numeroEmprestimos++;
+    }
+
+    /**
+     * Decrementa a quantidade de empréstimos do usuário de um em um
+     */
+    public void decrementaEmprestimos()
+    {
+        if(this.numeroEmprestimos > 0)
+        {
+            this.numeroEmprestimos--;
+        }
+    }
 }
