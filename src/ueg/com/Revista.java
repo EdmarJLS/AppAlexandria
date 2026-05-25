@@ -50,7 +50,7 @@ public class Revista implements ItemBiblioteca
     {
         return disponivel && !reservado;
     }
-    
+
     @Override
     public void emprestar()
     {
@@ -58,5 +58,11 @@ public class Revista implements ItemBiblioteca
         {
             this.disponivel = false;
         }
+    }
+
+    @Override
+    public void devolver()
+    {
+        this.disponivel = true;
     }
 }
