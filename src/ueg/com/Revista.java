@@ -45,4 +45,18 @@ public class Revista implements ItemBiblioteca
         return edicao;
     }
 
+    @Override
+    public boolean isDisponivel()
+    {
+        return disponivel && !reservado;
+    }
+    
+    @Override
+    public void emprestar()
+    {
+        if(!reservado)
+        {
+            this.disponivel = false;
+        }
+    }
 }
