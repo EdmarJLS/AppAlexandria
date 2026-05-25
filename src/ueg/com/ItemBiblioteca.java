@@ -12,7 +12,7 @@ package ueg.com;
  * @author Edmar
  * @version 1.0
  * @since 2026
- * @see Livro
+ * //@see Livro
  * @see Revista
  */
 

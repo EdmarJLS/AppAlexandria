@@ -27,4 +27,22 @@ public class Revista implements ItemBiblioteca
         this.reservado = false;
     }
 
+    /**
+     * Retorna o título da revista
+     * @return titulo
+     */
+    public String getTitulo()
+    {
+        return titulo;
+    }
+
+    /**
+     * Retorna a edição da revista
+     * @return edicao
+     */
+    public int getEdicao()
+    {
+        return edicao;
+    }
+
 }
