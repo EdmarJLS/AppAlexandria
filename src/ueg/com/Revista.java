@@ -14,5 +14,12 @@ public class Revista implements ItemBiblioteca
     private boolean disponivel;
     private boolean reservado;
 
-    
+    public Revista(String titulo, int edicao)
+    {
+        this.titulo = titulo;
+        this.edicao = edicao;
+        this.disponivel = true;
+        this.reservado = false;
+    }
+
 }
