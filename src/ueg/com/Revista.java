@@ -86,5 +86,10 @@ public class Revista implements ItemBiblioteca
     {
         this.reservado = false;
     }
-    
+
+    public String toString()
+    {
+        return "Revista: Título: " +titulo+ ", Edição: " +edicao+ ", Disponível: " +disponivel+ ", Reservado: " +reservado;
+    }
+
 }
