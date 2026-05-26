@@ -98,6 +98,4 @@ public class Livro implements ItemBiblioteca
         return "Revista: Título: " +titulo+ ", Edição: " +edicao+ ", Disponível: " +disponivel+ ", Reservado: " +reservado;
     }
 
-
-
 }
