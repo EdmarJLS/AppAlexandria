@@ -17,7 +17,7 @@ public class Livro implements ItemBiblioteca
     private boolean disponivel, reservado;
 
     /**
-     * Construtor para criar uma nova instância de um Livro
+     * Construtor para criar uma nova instância de livros
      * @param titulo do livro
      * @param edicao do livro
      * @param autor do livro
