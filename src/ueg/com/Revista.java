@@ -71,4 +71,20 @@ public class Revista implements ItemBiblioteca
     {
         return reservado;
     }
+
+    @Override
+    public void reservar()
+    {
+        if(disponivel)
+        {
+            this.reservado = true;
+        }
+    }
+
+    @Override
+    public void cancelarReserva()
+    {
+        this.reservado = false;
+    }
+    
 }
