@@ -65,4 +65,10 @@ public class Revista implements ItemBiblioteca
     {
         this.disponivel = true;
     }
+
+    @Override
+    public boolean isReservado()
+    {
+        return reservado;
+    }
 }
