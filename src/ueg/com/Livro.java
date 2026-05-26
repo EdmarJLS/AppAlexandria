@@ -12,19 +12,22 @@ package ueg.com;
  */
 public class Livro implements ItemBiblioteca
 {
-    private String titulo;
+    private String titulo, autor, isbn;
     private int edicao;
-    private boolean disponivel;
-    private boolean reservado;
+    private boolean disponivel, reservado;
 
     /**
-     * Construtor para criar uma nova instância da Revista
-     * @param titulo da revista
-     * @param edicao da revista
+     * Construtor para criar uma nova instância de um Livro
+     * @param titulo do livro
+     * @param edicao do livro
+     * @param autor do livro
+     * @param isbn do livro
      */
-    public Livro(String titulo, int edicao)
+    public Livro(String titulo, String autor, String isbn, int edicao)
     {
         this.titulo = titulo;
+        this.autor = autor;
+        this.isbn = isbn;
         this.edicao = edicao;
         this.disponivel = true;
         this.reservado = false;
