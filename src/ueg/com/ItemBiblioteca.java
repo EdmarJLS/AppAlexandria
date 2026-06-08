@@ -57,4 +57,6 @@ public interface ItemBiblioteca
      * usuários reservarem ou pegarem emprestado.
      */
     void cancelarReserva();
+
+    void cancelaReserva();
 }

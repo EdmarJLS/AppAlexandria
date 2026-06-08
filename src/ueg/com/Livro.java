@@ -13,22 +13,19 @@ package ueg.com;
 public class Livro implements ItemBiblioteca
 {
     private String titulo, autor, isbn;
-    private int edicao;
     private boolean disponivel, reservado;
 
     /**
      * Construtor para criar uma nova instância de livros
      * @param titulo do livro
-     * @param edicao do livro
      * @param autor do livro
      * @param isbn do livro
      */
-    public Livro(String titulo, String autor, String isbn, int edicao)
+    public Livro(String titulo, String autor, String isbn)
     {
         this.titulo = titulo;
         this.autor = autor;
         this.isbn = isbn;
-        this.edicao = edicao;
         this.disponivel = true;
         this.reservado = false;
     }
@@ -46,10 +43,6 @@ public class Livro implements ItemBiblioteca
      * Retorna a edição da revista
      * @return edicao
      */
-    public int getEdicao()
-    {
-        return edicao;
-    }
 
     @Override
     public boolean isDisponivel()
@@ -95,7 +88,7 @@ public class Livro implements ItemBiblioteca
 
     public String toString()
     {
-        return "Revista: Título: " +titulo+ ", Edição: " +edicao+ ", Disponível: " +disponivel+ ", Reservado: " +reservado;
+        return "Revista: Título: " +titulo+ ", Disponível: " +disponivel+ ", Reservado: " +reservado;
     }
 
 }

@@ -142,10 +142,67 @@ public class Biblioteca implements Relatorio
             }
         }
         return "Item não encontrado";
-
     }
+
+    /**
+     * Reserva um item para um usuário mediante o CPF'
+     * @param titulo
+     * @param cpf
+     * @return
+     */
+    public String reservarItem(String titulo, String cpf){
+        for(ItemBiblioteca item : itens ){
+            if( ((item instanceof Livro) &&
+                    ((Livro) item).getTitulo().equals(titulo)) ||
+                    ((item instanceof Revista) &&
+                            ((Revista) item).getTitulo().equals(titulo))){
+                if (item.isDisponivel() && !item.isReservado()){
+                    item.reservar();
+                    return "Item reservado com sucesso.";
+                }
+                return "Item já está reservado ou indisponível.";
+            }
+        }
+        return "Item não encontrado.";
+    }
+
+    /**
+     * Cancela a reserva de um item
+     * @param titulo
+     */
+    public void cancelarReserva(String titulo){
+        for(ItemBiblioteca item : itens){
+            if ( ((item instanceof Livro) &&
+                    ((Livro) item).getTitulo().equals(titulo)) ||
+                    ((item instanceof Revista) &&
+                            ((Revista) item).getTitulo().equals(titulo))){
+                if(item.isDisponivel()){
+                    item.cancelaReserva();
+                    System.out.println("Reserva cancelado com sucesso");
+                    return;
+                }
+                System.out.println("Item não está reservado");
+                return;
+            }
+        }
+        System.out.println("Item não encontrado");
+    }
+
+    /**
+     * Gera um relatório de todos os itens da biblioteca,
+     * mostrando seu estado atual.
+     * <p>
+     *     Implementa a interface {@code Relatorio}
+     * </p>
+     */
+
     @Override
     public void geraRelatorio()
     {
+        System.out.println("Relatório de Itens");
+        for(ItemBiblioteca item : itens){
+            System.out.println(item.toString());
+        }
+
     }
 }
